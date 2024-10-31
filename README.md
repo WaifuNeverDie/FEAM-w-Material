@@ -32,7 +32,7 @@ This setup is organized to meet professional standards:
 ```bash
    git clone https://github.com/yourusername/salesmetrics_dashboard.git
 ```
-2 **Install Dependencies**:
+2. **Install Dependencies**:
 ```bash
    pip install -r requirements.txt
 ```

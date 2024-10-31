@@ -4,7 +4,7 @@
 import numpy as np
 from typing import List, Union
 
-def gradshape(xi: List[Union[float, int]], round_output: int = 4) -> np.ndarray:
+def gradshape(xi_vals: List[Union[float, int]], round_output: int = 4) -> np.ndarray:
 	"""
 	Calculates the gradient of the shape functions for a 4-node, isoparametric element.
 
@@ -25,16 +25,16 @@ def gradshape(xi: List[Union[float, int]], round_output: int = 4) -> np.ndarray:
 	Raises:
 		ValueError: If the input list `xi` does not contain exactly two elements.
 	"""
-	if len(xi) != 2:
+	if len(xi_vals) != 2:
 		raise ValueError("Input xi must be a 1x2 list [xi, eta].")
 	
 	# Unpack xi and eta from the input list
-	xi_val, eta = xi
+	xi, eta = xi_vals
 	
 	# Gradient matrix calculation
 	dN = [
 			[-(1.0 - eta), (1.0 - eta), (1.0 + eta), -(1.0 + eta)],
-			[-(1.0 - xi_val), -(1.0 + xi_val), (1.0 + xi_val), (1.0 - xi_val)]
+			[-(1.0 - xi), -(1.0 + xi), (1.0 + xi), (1.0 - xi)]
 			]
 	
 	# Convert to numpy array and scale by 0.25

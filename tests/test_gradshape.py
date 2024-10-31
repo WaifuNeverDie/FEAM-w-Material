@@ -9,7 +9,7 @@ class MyTestCases(unittest.TestCase):
 		xi = [0.5, -0.5]
 		expected_output = np.array([
 				[-0.375, 0.375, 0.125, -0.125],
-				[-0.625, -0.125, 0.125, 0.625]
+				[-0.125, -0.375,  0.375, 0.125]
 				])
 		np.testing.assert_array_almost_equal(gradshape(xi), expected_output, decimal=4)
 	
@@ -21,11 +21,11 @@ class MyTestCases(unittest.TestCase):
 	def test_no_rounding(self):
 		"""Test that gradshape returns unrounded output when round_output is None."""
 		xi = [0.3, -0.7]
-		result = gradshape(xi)
+		result = gradshape(xi, 3)
 		# Manually calculated expected result without rounding
 		expected_output = np.array([
-				[-0.325, 0.325, 0.675, -0.675],
-				[-0.675, -0.075, 0.075, 0.675]
+				[-0.425,  0.425,  0.075, -0.075],
+				[-0.175, -0.325, 0.325, 0.175]
 				])
 		np.testing.assert_array_almost_equal(result, expected_output)
 

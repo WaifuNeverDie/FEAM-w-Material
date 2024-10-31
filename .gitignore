@@ -1,0 +1,19 @@
+### Adobe template
+# Adobe Source Files
+*.psd
+*.ai
+*.indd
+*.prproj
+*.aep
+
+
+
+#### `.gitignore`
+A file that specifies files and directories for Git to ignore.
+
+```plaintext
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+

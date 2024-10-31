@@ -29,17 +29,25 @@ This setup is organized to meet professional standards:
 ## Installation and Usage
 ### Refer to the initial setup instructions.
 1. **Clone the Repository**:
-   ```bash
+```bash
    git clone https://github.com/yourusername/salesmetrics_dashboard.git
-
-### Running the Application
-
-1. **Install Dependencies**:
-
-   ```bash
+```
+2 **Install Dependencies**:
+```bash
    pip install -r requirements.txt
-## Running Tests
+```
+3. **Set up Environment Variables**
+```bash
+    DATABASE_URI=your_database_uri
+    SECRET_KEY=your_secret_key
+```
+### Running the Application
+```bash
+    python src/app.py
+```
+### Running Tests
 To verify functionality:
 
 ```bash
-python -m unittest discover -s tests
+    python -m unittest discover -s tests
+```

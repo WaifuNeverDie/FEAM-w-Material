@@ -1,4 +1,4 @@
-# src/functions/shape_functions.py
+# src/functions/shape_function.py
 
 import numpy as np
 from typing import List

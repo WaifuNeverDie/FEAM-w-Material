@@ -33,7 +33,7 @@ This setup is organized to meet professional standards:
 ### Refer to the initial setup instructions.
 1. **Clone the Repository**:
 ```bash
-   git clone https://github.com/yourusername/salesmetrics_dashboard.git
+   git clone https://github.com/WaifuNeverDie/FEAM-w-Material.git
 ```
 2. **Install Dependencies**:
 ```bash

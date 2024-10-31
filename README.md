@@ -1,15 +1,18 @@
-# FEM/FEA with Material 
-This Project is build on python 12.3.2
+# BASIC FEM/FEA with Material 
+This project is build on python 12.3.2 and is a subject homework project of a student.
 ## Features
-- **Sales Analysis**: Track monthly and yearly revenue and units sold.
-- **Customer Analysis**: Calculate Customer Lifetime Value (CLV), segment customers by revenue.
-- **Product Analysis**: Track sales by product, identify top-selling products.
-- **Trend Analysis**: Discover monthly and quarterly sales trends.
+- **FEM Analysis**: Perform basic FEM analysis for beam, bar, truss problem.
+- **Beam Analysis**: Main focus is to solve the 3 bar problem.
+- **Gaussian Shape Function**: Including Gaussian Shape Function for meshing and calculating.
+- **Material**: Including material analysis.
 
 ## Directory Structure
 - `src/`: Contains source code.
     - `main.py`: Main script to launch the application.
-    - `shape_functions.py`: Core function for calculating shape functions.
+    - `shape_function.py`: Core function for calculating shape functions.
+    - `functions/`: UI components.
+        - `shape_function.py`: Calculate Gaussian shape function.
+        - `gradshape_function.py`: Calculate Gradient of Gaussian shape function.
     - `ui/`: UI components.
         - `app.py`: Main UI class handling window setup and events.
         - `widgets/`: Custom widgets for displaying information.

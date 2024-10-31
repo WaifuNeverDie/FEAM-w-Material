@@ -39,11 +39,6 @@ This setup is organized to meet professional standards:
 ```bash
    pip install -r requirements.txt
 ```
-3. **Set up Environment Variables**
-```bash
-    DATABASE_URI=your_database_uri
-    SECRET_KEY=your_secret_key
-```
 ### Running the Application
 ```bash
     python src/app.py

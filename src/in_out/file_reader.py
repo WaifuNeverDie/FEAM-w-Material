@@ -1,4 +1,4 @@
-# src/io/file_reader.py
+# src/in_out/file_reader.py
 
 def read_inp_file(inp_file_name):
 	"""Reads and parses the input file for nodes, elements, and boundary conditions."""

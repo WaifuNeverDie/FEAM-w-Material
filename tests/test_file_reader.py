@@ -1,7 +1,7 @@
 # tests/test_file_reader.py
 
 import unittest
-from src.io.file_reader import read_inp_file
+from src.in_out.file_reader import read_inp_file
 
 
 class MyTestCases(unittest.TestCase):

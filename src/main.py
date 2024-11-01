@@ -2,12 +2,12 @@
 
 import numpy as np
 import sys
-from io.file_reader import read_inp_file
-from functions.shape_functions import gradshape
-from functions.material_properties import plane_strain_tangent
-from functions.stiffness_matrix import assemble_stiffness_matrix, apply_boundary_conditions
-from utils.error_handling import local_error
-from visualization.plot_results import plot_displacements
+from src.in_out.file_reader import read_inp_file
+# from functions.gradshape_function import gradshape
+from src.functions.material_property import plane_strain_tangent
+from src.functions.stiffness_matrix import assemble_stiffness_matrix, apply_boundary_conditions
+from src.utils.error_handling import local_error
+from src.visualization.plotting import plot_displacements
 
 
 def main():

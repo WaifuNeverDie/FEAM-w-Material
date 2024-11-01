@@ -1,7 +1,7 @@
 # src/functions/stiffness_matrix.py
 
 import numpy as np
-from gradshape_function import gradshape
+from shape_function import gradshape
 
 def assemble_stiffness_matrix(nodes, conn, C, q4):
 	num_nodes = len(nodes)

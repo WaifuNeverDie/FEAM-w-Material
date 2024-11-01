@@ -1,14 +1,14 @@
 # src/functions/stiffness_matrix.py
-
 import numpy as np
 from shape_function import gradshape
+
 
 def assemble_stiffness_matrix(nodes, conn, C, q4):
 	num_nodes = len(nodes)
 	K = np.zeros((2 * num_nodes, 2 * num_nodes))
 	B = np.zeros((3, 8))
 	
-	for c in conn:
+	for c in conn:                           
 		node_pts = nodes[c, :]
 		Ke = np.zeros((8, 8))
 		for q in q4:

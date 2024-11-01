@@ -3,7 +3,7 @@ import numpy as np
 from src.functions.material_property import plane_strain_tangent
 
 
-class TestPlaneStrainTangent(unittest.TestCase):
+class MyTestCases(unittest.TestCase):
 	
 	def test_plane_strain_tangent_basic(self):
 		"""Test calculation of plane strain tangent matrix for a basic case."""

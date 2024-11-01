@@ -1,6 +1,21 @@
 # src/functions/stiffness_matrix.py
+
 import numpy as np
-from shape_function import gradshape
+
+# src/functions/shape_functions.py
+
+def shape(xi):
+	xi, eta = tuple(xi)
+	N = [(1.0 - xi) * (1.0 - eta), (1.0 + xi) * (1.0 - eta),
+	     (1.0 + xi) * (1.0 + eta), (1.0 - xi) * (1.0 + eta)]
+	return 0.25 * np.array(N)
+
+
+def gradshape(xi):
+	xi, eta = tuple(xi)
+	dN = [[-(1.0 - eta), (1.0 - eta), (1.0 + eta), -(1.0 + eta)],
+	      [-(1.0 - xi), -(1.0 + xi), (1.0 + xi), (1.0 - xi)]]
+	return 0.25 * np.array(dN)
 
 
 def assemble_stiffness_matrix(nodes, conn, C, q4):
@@ -29,3 +44,6 @@ def apply_boundary_conditions(K, f, boundary):
 		K[j, :] = 0.0
 		K[j, j] = 1.0
 		f[j] = val
+
+
+# src/functions/shape_function.py

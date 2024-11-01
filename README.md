@@ -41,7 +41,7 @@ This setup is organized to meet professional standards:
 ```
 ### Running the Application
 ```bash
-    python src/app.py
+    python src/main_char.py src/beam.txt
 ```
 ### Running Tests
 To verify functionality:
